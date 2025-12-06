@@ -1,0 +1,101 @@
+.section {
+    height: 300vh;
+    position: relative;
+    background: var(--background);
+    overflow: hidden;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base Orb Style */
+.orbBack1,
+.orbBack2,
+.orbMid1,
+.orbMid2,
+.orbFront1 {
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+/* Background Layer */
+.orbBack1 {
+    top: 10%;
+    left: 10%;
+    width: 20vw;
+    filter: blur(4px);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.orbBack2 {
+    bottom: 20%;
+    right: 15%;
+    width: 25vw;
+    filter: blur(3px);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* Midground Layer */
+.orbMid1 {
+    top: 30%;
+    right: 25%;
+    width: 30vw;
+    z-index: 2;
+}
+
+.orbMid2 {
+    bottom: 10%;
+    left: 20%;
+    width: 28vw;
+    z-index: 2;
+}
+
+/* Foreground Layer */
+.orbFront1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    z-index: 5;
+}
+
+.orbImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* mix-blend-mode is now on the container */
+}
+
+.content {
+    text-align: center;
+    z-index: 100;
+    position: relative;
+    /* Removed mix-blend-mode: difference to prevent text disappearing */
+}
+
+.heading {
+    font-family: var(--font-playfair);
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.text {
+    font-family: var(--font-outfit);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--accent);
+    max-width: 600px;
+    margin: 0 auto;
+}
