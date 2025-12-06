@@ -16,14 +16,17 @@ export default function DeepDive() {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 45]);
     const opacity = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [0, 1, 0]);
 
+    const zVisual = useTransform(scrollYProgress, [0, 1], [0, 200]);
+    const zRing = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
     return (
         <section ref={containerRef} className={styles.section}>
             <div className={styles.sticky}>
                 <div className={styles.visualContainer}>
-                    <motion.div style={{ scale, rotate }} className={styles.visual}>
+                    <motion.div style={{ scale, rotate, z: zVisual }} className={styles.visual}>
                         <Image src="/abstract-flow.png" alt="Deep Dive Visual" fill className={styles.image} />
                     </motion.div>
-                    <motion.div style={{ scale: useTransform(scrollYProgress, [0.2, 0.8], [1.2, 0.8]), rotate: useTransform(scrollYProgress, [0, 1], [45, 0]) }} className={styles.visualRing} />
+                    <motion.div style={{ scale: useTransform(scrollYProgress, [0.2, 0.8], [1.2, 0.8]), rotate: useTransform(scrollYProgress, [0, 1], [45, 0]), z: zRing }} className={styles.visualRing} />
                     <div className={styles.glow} />
                 </div>
                 <div className={styles.content}>

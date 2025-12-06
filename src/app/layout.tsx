@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 import SmoothScroll from "@/components/smooth-scroll";
 
 const outfit = Outfit({
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
       <body>
+        <Navbar />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

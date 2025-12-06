@@ -103,6 +103,30 @@
     opacity: 0.8;
 }
 
+.ctaButton {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-family: var(--font-outfit);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaButton:hover {
+    background: white;
+    color: black;
+    border-color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
 .scrollIndicator {
     position: absolute;
     bottom: 2rem;

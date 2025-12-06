@@ -121,6 +121,19 @@ export default function Hero() {
                         A Life Extraordinary
                     </motion.p>
                 </MouseParallax>
+                <MouseParallax strength={0.01}>
+                    <motion.button
+                        style={{ y: textY, opacity: textOpacity }}
+                        className={styles.ctaButton}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 1.5 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Explore the Void
+                    </motion.button>
+                </MouseParallax>
             </div>
 
             <motion.div
