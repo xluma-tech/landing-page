@@ -1,5 +1,5 @@
 .section {
-    height: 250vh;
+    height: 100vh;
     position: relative;
     background: #000;
 }
@@ -79,4 +79,24 @@
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     color: #ccc;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .visualContainer {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
 }

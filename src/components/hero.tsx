@@ -100,39 +100,42 @@ export default function Hero() {
 
             <div className={styles.content}>
                 <MouseParallax strength={0.02}>
-                    <motion.h1
-                        style={{ y: textY, opacity: textOpacity }}
-                        className={styles.title}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                    >
-                        AETHER
-                    </motion.h1>
+                    <motion.div style={{ y: textY, opacity: textOpacity }}>
+                        <motion.h1
+                            className={styles.title}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                        >
+                            AETHER
+                        </motion.h1>
+                    </motion.div>
                 </MouseParallax>
                 <MouseParallax strength={0.01}>
-                    <motion.p
-                        style={{ y: textY, opacity: textOpacity }}
-                        className={styles.subtitle}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.8 }}
-                        transition={{ duration: 1, delay: 1 }}
-                    >
-                        A Life Extraordinary
-                    </motion.p>
+                    <motion.div style={{ y: textY, opacity: textOpacity }}>
+                        <motion.p
+                            className={styles.subtitle}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.8 }}
+                            transition={{ duration: 1, delay: 1 }}
+                        >
+                            A Life Extraordinary
+                        </motion.p>
+                    </motion.div>
                 </MouseParallax>
                 <MouseParallax strength={0.01}>
-                    <motion.button
-                        style={{ y: textY, opacity: textOpacity }}
-                        className={styles.ctaButton}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 1.5 }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Explore the Void
-                    </motion.button>
+                    <motion.div style={{ y: textY, opacity: textOpacity }}>
+                        <motion.button
+                            className={styles.ctaButton}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 1.5 }}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Explore the Void
+                        </motion.button>
+                    </motion.div>
                 </MouseParallax>
             </div>
 

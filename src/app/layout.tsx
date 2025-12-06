@@ -3,22 +3,21 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import SmoothScroll from "@/components/smooth-scroll";
+import Chatbot from "@/components/chatbot";
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
-  display: "swap",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Aether | A Life Extraordinary",
-  description: "An immersive journey into the ethereal.",
+  description: "Experience the ethereal beauty of the digital void.",
 };
 
 export default function RootLayout({
@@ -27,10 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
-      <body>
-        <Navbar />
-        <SmoothScroll>{children}</SmoothScroll>
+    <html lang="en">
+      <body className={`${outfit.variable} ${playfair.variable}`}>
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Chatbot />
+        </SmoothScroll>
       </body>
     </html>
   );
