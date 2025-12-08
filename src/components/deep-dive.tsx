@@ -31,12 +31,12 @@ export default function DeepDive() {
                 </div>
                 <div className={styles.content}>
                     <MouseParallax strength={0.03}>
-                        <motion.h2 style={{ opacity }} className={styles.title}>
+                        <motion.h2 style={{ opacity, y: useTransform(scrollYProgress, [0, 1], [50, -50]) }} className={styles.title}>
                             The Deep Dive
                         </motion.h2>
                     </MouseParallax>
                     <MouseParallax strength={0.015}>
-                        <motion.p style={{ opacity }} className={styles.text}>
+                        <motion.p style={{ opacity, y: useTransform(scrollYProgress, [0, 1], [100, -100]) }} className={styles.text}>
                             Immerse yourself in the unknown. <br />
                             Where texture meets emotion.
                         </motion.p>

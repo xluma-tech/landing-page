@@ -27,12 +27,16 @@ export default function ParallaxGallery({ onSelect }: { onSelect: (src: string |
     return (
         <section className={styles.gallery}>
             <div className={styles.grid}>
-                {items.map((item) => (
+                {items.map((item, index) => (
                     <motion.div
                         key={item.id}
                         layoutId={`card-${item.id}`}
                         className={styles.card}
                         onClick={() => handleSelect(item)}
+                        initial={{ opacity: 0, y: 200 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 1, delay: index * 0.2, ease: [0.25, 0.1, 0.25, 1] }}
                     >
                         <Image src={item.src} alt={item.title} fill className={styles.image} />
                         <motion.div className={styles.overlay}>

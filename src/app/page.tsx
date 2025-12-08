@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import CustomCursor from "@/components/custom-cursor";
 import BackgroundTransition from "@/components/background-transition";
 import SplineBackground from "@/components/spline-background";
+import ScrollReveal from "@/components/scroll-reveal";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -23,12 +24,16 @@ export default function Home() {
       <section className={styles.story}>
         <SplineBackground />
         <div className={styles.storyContent}>
-          <p>
-            Beyond the visible spectrum lies a world of infinite possibility.
-          </p>
-          <p>
-            Where form follows fantasy, and gravity is but a suggestion.
-          </p>
+          <ScrollReveal width="100%">
+            <p>
+              Beyond the visible spectrum lies a world of infinite possibility.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal width="100%" delay={0.2}>
+            <p>
+              Where form follows fantasy, and gravity is but a suggestion.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
       <ParallaxGallery onSelect={setActiveImage} />

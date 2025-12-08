@@ -5,6 +5,8 @@ import Navbar from "@/components/navbar";
 import SmoothScroll from "@/components/smooth-scroll";
 import Chatbot from "@/components/chatbot";
 
+import CustomCursor from "@/components/custom-cursor";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -29,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.variable} ${playfair.variable}`}>
         <SmoothScroll>
+          <CustomCursor />
           <Navbar />
           {children}
           <Chatbot />
